@@ -130,6 +130,11 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Listing ====================== */
+#maincontent-details {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -279,15 +284,15 @@ nav h1 a {
 }
 
 /* Media Queries */
-@media screen and (max-width: 512px) {
-  .name-header h1, .name-header h2 {
-      line-height: 1.1em;
-      text-align: center;     
+@media screen and (max-width: 1006px) {
+  #restaurants-list {
+      padding: 5px;   
   }
 
-  .header__inner {
-      justify-content: center;
-  }  
+  #restaurants-list li {
+    width: 90%;  
+    text-align: center; 
+}
 
 }
 
