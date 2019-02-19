@@ -71,7 +71,8 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    /*width: calc(50% - 80px);*/
+    width: 100%;
 }
 
 /* Display list items side by side */
@@ -130,11 +131,6 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Listing ====================== */
-#maincontent-details {
-  display: flex;
-  flex-wrap: wrap; 
-}
-
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -191,20 +187,40 @@ nav h1 a {
   text-transform: uppercase;
 }
 
+/* Media Queries */
+@media screen and (max-width: 1006px) {
+  #restaurants-list {
+      padding: 5px;   
+  }
+
+  #restaurants-list li {
+    width: 90%;  
+    text-align: center; 
+}
+
+}
+
 /* ====================== Restaurant Details ====================== */
+#maincontent-details {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
 .inside header {
-  position: fixed;
+  /*position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1000;*/
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
+  /*height: 87%;*/
+  height: 300px;
+  /*position: fixed;
   right: 0;
-  top: 80px;
-  width: 50%;
+  top: 80px;*/
+  width: 100%;
 }
 .inside #map {
   background-color: #ccc;
@@ -248,8 +264,11 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -284,21 +303,22 @@ nav h1 a {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1006px) {
-  #restaurants-list {
-      padding: 5px;   
+@media screen and (max-width: 1200px) {
+  #breadcrumb {
+    width: 100%;
   }
 
-  #restaurants-list li {
-    width: 90%;  
+  .inside #map-container {
+      width: 100%;
+  }
+
+  #restaurant-container, #reviews-container {
     text-align: center; 
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-}
-
-@media screen and (max-width: 1199px) {
-  body {
-      margin-left: 10px;
-      margin-right: 10px;
-  }
 }
