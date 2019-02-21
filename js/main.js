@@ -176,7 +176,7 @@ createRestaurantHTML = (restaurant) => {
   li.append(address);
 
   const more = document.createElement('a');
-  // Adding tab index für View Details button
+  // Adding tab index for View Details button
   let tabIndex = document.createAttribute("tabindex");
   tabIndex.value = "4";
   more.setAttributeNode(tabIndex);
