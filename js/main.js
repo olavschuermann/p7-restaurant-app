@@ -176,6 +176,10 @@ createRestaurantHTML = (restaurant) => {
   li.append(address);
 
   const more = document.createElement('a');
+  // Adding tab index für View Details button
+  let tabIndex = document.createAttribute("tabindex");
+  tabIndex.value = "4";
+  more.setAttributeNode(tabIndex);
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
