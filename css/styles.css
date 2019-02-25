@@ -234,7 +234,8 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 83%;
+  height: 1.5em;
 }
 #restaurant-name {
   color: #f18200;

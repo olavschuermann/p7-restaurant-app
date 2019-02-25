@@ -3,7 +3,6 @@ const cacheName = 'restaurant-app-udacity_v1.0';
 // Files to cache:
 const cacheFiles = [
 	'./',
-	'./index.html',
 	'./css/styles.css',
     './data/restaurants.json',
 	'./img/1.jpg',
@@ -16,7 +15,8 @@ const cacheFiles = [
 	'./img/8.jpg',
 	'./img/9.jpg',
     './img/10.jpg',
-	'./js/main.js',
+	'./index.html',
+    './js/main.js',
 	'./js/dbhelper.js',
 	'./js/restaurant_info.js',
     './restaurant.html'
@@ -26,7 +26,7 @@ const cacheFiles = [
 self.addEventListener('install', function (evt) {
 	evt.waitUntil(
 		caches.open(cacheName).then(function(cache) {
-			console.log('Service Worker: Caching Files');
+			console.log('Service Worker: Files cached!');
 			return cache.addAll(cacheFiles);
 		})
 	);
